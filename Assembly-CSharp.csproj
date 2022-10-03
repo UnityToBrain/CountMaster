@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{85d3ebd9-affd-0930-4ff1-5371b0ab50b2}</ProjectGuid>
+    <ProjectGuid>{9d55e824-d47a-1a0d-eb1b-cd7f3e7313da}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -52,18 +52,19 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\stickManManager.cs" />
-     <Compile Include="Assets\PlayerManager.cs" />
+     <Compile Include="Assets\Scripts\stickManManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-     <Compile Include="Assets\GateManager.cs" />
-     <Compile Include="Assets\enemyManager.cs" />
+     <Compile Include="Assets\Scripts\GateManager.cs" />
+     <Compile Include="Assets\Scripts\enemyManager.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\destroy.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -300,10 +301,10 @@
  <HintPath>D:/ProgramFiles/Unity 2021.3.21f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/ProgramFiles/Unity 2021.3.21f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -651,79 +652,79 @@
  <HintPath>D:/ProgramFiles/Unity 2021.3.21f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Shaders">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Runtime">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Searcher.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Cinemachine">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
 using System.Collections;
+using Cinemachine;
 using DG.Tweening;
 using TMPro;
 using Unity.Mathematics;
@@ -25,7 +26,9 @@ public class PlayerManager : MonoBehaviour
    [SerializeField] private Transform enemy;
    private bool attack;
    public static PlayerManager PlayerManagerInstance;
-   
+   public ParticleSystem blood;
+   public GameObject SecondCam;
+   public bool FinishLine,moveTheCamera;
     void Start()
     {
         player = transform;
@@ -38,6 +41,7 @@ public class PlayerManager : MonoBehaviour
 
         PlayerManagerInstance = this;
 
+        gameState = false;
     }
     
     void Update()
@@ -86,6 +90,7 @@ public class PlayerManager : MonoBehaviour
             {
                 enemy.transform.GetChild(1).GetComponent<enemyManager>().StopAttacking();
                 gameObject.SetActive(false);
+             
             }
         }
         else
@@ -93,15 +98,40 @@ public class PlayerManager : MonoBehaviour
             MoveThePlayer();
             
         }
+
+        
+        if (transform.childCount == 1 && FinishLine)
+        {
+            gameState = false;
+        }
+        
        
         if (gameState)
         {
-            road.Translate(road.forward * Time.deltaTime * roadSpeed);
+          road.Translate(road.forward * Time.deltaTime * roadSpeed);
             
-            for (int i = 1; i < transform.childCount; i++)
-            {
-                transform.GetChild(i).GetComponent<Animator>().SetBool("run",true);
-            }
+           // for (int i = 1; i < transform.childCount; i++)
+           // {
+           //     if (transform.GetChild(i).GetComponent<Animator>() != null)
+           //         transform.GetChild(i).GetComponent<Animator>().SetBool("run",true);
+           //    
+           // }
+        }
+
+        if (moveTheCamera && transform.childCount > 1)
+        {
+            var cinemachineTransposer = SecondCam.GetComponent<CinemachineVirtualCamera>()
+              .GetCinemachineComponent<CinemachineTransposer>();
+
+          var cinemachineComposer = SecondCam.GetComponent<CinemachineVirtualCamera>()
+              .GetCinemachineComponent<CinemachineComposer>();
+
+          cinemachineTransposer.m_FollowOffset = new Vector3(4.5f, Mathf.Lerp(cinemachineTransposer.m_FollowOffset.y,
+              transform.GetChild(1).position.y + 2f, Time.deltaTime * 1f), -5f);
+          
+          cinemachineComposer.m_TrackedObjectOffset = new Vector3(0f,Mathf.Lerp(cinemachineComposer.m_TrackedObjectOffset.y,
+              4f,Time.deltaTime * 1f),0f);
+          
         }
        
     }
@@ -153,11 +183,7 @@ public class PlayerManager : MonoBehaviour
                     ,transform.position.y,transform.position.z);
                   
             }
-
         }
-
-       
-   
     }
 
     public void FormatStickMan()
@@ -173,7 +199,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    private void MakeStickMan(int number)
+    public void MakeStickMan(int number)
     {
         for (int i = numberOfStickmans; i < number; i++)
         {
@@ -181,15 +207,14 @@ public class PlayerManager : MonoBehaviour
         }
 
         numberOfStickmans = transform.childCount - 1;
-        
         CounterTxt.text = numberOfStickmans.ToString();
-
         FormatStickMan();
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.CompareTag("gate"))
         {
             other.transform.parent.GetChild(0).GetComponent<BoxCollider>().enabled = false; // gate 1
@@ -222,6 +247,15 @@ public class PlayerManager : MonoBehaviour
             StartCoroutine(UpdateTheEnemyAndPlayerStickMansNumbers());
 
         }
+
+        if (other.CompareTag("Finish"))
+        {
+            SecondCam.SetActive(true);
+            FinishLine = true;
+            Tower.TowerInstance.CreateTower(transform.childCount - 1);
+            transform.GetChild(0).gameObject.SetActive(false);
+            
+        }
     }
 
     IEnumerator UpdateTheEnemyAndPlayerStickMansNumbers()
@@ -237,8 +271,7 @@ public class PlayerManager : MonoBehaviour
 
             enemy.transform.GetChild(1).GetComponent<enemyManager>().CounterTxt.text = numberOfEnemyStickmans.ToString();
             CounterTxt.text = numberOfStickmans.ToString();
-
-
+            
             yield return null;
         }
 
@@ -248,8 +281,6 @@ public class PlayerManager : MonoBehaviour
             {
                 transform.GetChild(i).rotation = Quaternion.identity;
             }
-
-           
         }
     }
 }

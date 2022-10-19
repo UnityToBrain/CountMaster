@@ -55,16 +55,20 @@
      <Compile Include="Assets\Scripts\stickManManager.cs" />
      <Compile Include="Assets\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Scripts\ParentNull.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Scripts\Tower.cs" />
      <Compile Include="Assets\Scripts\GateManager.cs" />
+     <Compile Include="Assets\Scripts\ObjectPoolItem.cs" />
      <Compile Include="Assets\Scripts\enemyManager.cs" />
+     <Compile Include="Assets\Scripts\destroy.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
-     <Compile Include="Assets\destroy.cs" />
+     <Compile Include="Assets\menuManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -651,11 +655,17 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>D:/ProgramFiles/Unity 2021.3.21f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Recorder.Editor">
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Shaders">
  <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Recorder.Base">
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Runtime">
  <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
@@ -725,6 +735,9 @@
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Editor">
  <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Recorder">
+ <HintPath>F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637980638993452118
-    m_Hash: 2981115892
+      ticks: 638015510750169591
+    m_Hash: 3420035324
   m_LockFileStatus:
     m_FilePath: F:/YouTube_UnityToBrain/CM/Count Master/CountMaster/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637980638995830008
-    m_Hash: 3215727928
+      ticks: 638015510753203177
+    m_Hash: 1979297302
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -315,6 +315,7 @@ m_PackageAssets:
         - 1.17.0
         - 1.17.1
         - 1.17.2
+        - 1.17.6
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -350,6 +351,7 @@ m_PackageAssets:
         - 1.17.0
         - 1.17.1
         - 1.17.2
+        - 1.17.6
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -460,6 +462,7 @@ m_PackageAssets:
         - 3.0.13
         - 3.0.14
         - 3.0.15
+        - 3.0.16
         compatible:
         - 1.0.2
         - 1.0.6
@@ -492,6 +495,7 @@ m_PackageAssets:
         - 3.0.13
         - 3.0.14
         - 3.0.15
+        - 3.0.16
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -694,6 +698,123 @@ m_PackageAssets:
         url: git+https://github.com/Unity-Technologies/com.unity.ide.vscode.git
         revision: 1f4f605d5c988cb610c372b5c5216c46cc8f5d30
         path: 
+    - packageId: com.unity.recorder@2.5.7
+      testable: 0
+      isDirectDependency: 1
+      version: 2.5.7
+      source: 1
+      resolvedPath: F:\YouTube_UnityToBrain\CM\Count Master\CountMaster\Library\PackageCache\com.unity.recorder@2.5.7
+      assetPath: Packages/com.unity.recorder
+      name: com.unity.recorder
+      displayName: Unity Recorder
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'The Unity Recorder allows you to capture and save data from the
+        Unity Editor during Play Mode: animations, videos, images, audio, and more.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 2.0.0-preview.6
+        - 2.0.1-preview.1
+        - 2.0.2-preview.3
+        - 2.0.3-preview.1
+        - 2.1.0-preview.1
+        - 2.2.0-preview.4
+        - 2.3.0-preview.3
+        - 2.4.0-preview.1
+        - 2.5.0-pre.1
+        - 2.5.2
+        - 2.5.4
+        - 2.5.5
+        - 2.5.7
+        - 2.6.0-exp.3
+        - 2.6.0-exp.4
+        - 3.0.0-pre.1
+        - 3.0.0-pre.2
+        - 3.0.0
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 4.0.0-pre.1
+        - 4.0.0-pre.2
+        - 4.0.0-pre.3
+        - 4.0.0-pre.4
+        - 4.0.0-pre.5
+        - 4.0.0
+        compatible:
+        - 2.0.0-preview.6
+        - 2.0.1-preview.1
+        - 2.0.2-preview.3
+        - 2.0.3-preview.1
+        - 2.1.0-preview.1
+        - 2.2.0-preview.4
+        - 2.3.0-preview.3
+        - 2.4.0-preview.1
+        - 2.5.0-pre.1
+        - 2.5.2
+        - 2.5.4
+        - 2.5.5
+        - 2.5.7
+        - 2.6.0-exp.3
+        - 2.6.0-exp.4
+        - 3.0.0-pre.1
+        - 3.0.0-pre.2
+        - 3.0.0
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 4.0.0-pre.1
+        - 4.0.0-pre.2
+        - 4.0.0-pre.3
+        verified: 2.5.7
+      dependencies:
+      - name: com.unity.timeline
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.timeline
+        version: 1.4.8
+      - name: com.unity.modules.director
+        version: 1.0.0
+      - name: com.unity.modules.audio
+        version: 1.0.0
+      - name: com.unity.modules.animation
+        version: 1.0.0
+      - name: com.unity.modules.particlesystem
+        version: 1.0.0
+      keywords:
+      - unity
+      - recorder
+      - recording
+      - capture
+      - video
+      - animation
+      - clip
+      - images
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637717102070000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.recorder.git
+        revision: a59deb20019b176e95dd8efa2f9b41b8e4a0bb96
+        path: 
     - packageId: com.unity.render-pipelines.universal@10.6.0
       testable: 0
       isDirectDependency: 1
@@ -761,6 +882,7 @@ m_PackageAssets:
         - 10.8.1
         - 10.9.0
         - 10.10.0
+        - 10.10.1
         compatible:
         - 10.6.0
         - 10.7.0
@@ -768,6 +890,7 @@ m_PackageAssets:
         - 10.8.1
         - 10.9.0
         - 10.10.0
+        - 10.10.1
         verified: 10.6.0
       dependencies:
       - name: com.unity.mathematics
@@ -3327,6 +3450,7 @@ m_PackageAssets:
         - 10.8.1
         - 10.9.0
         - 10.10.0
+        - 10.10.1
         compatible:
         - 10.6.0
         - 10.7.0
@@ -3334,6 +3458,7 @@ m_PackageAssets:
         - 10.8.1
         - 10.9.0
         - 10.10.0
+        - 10.10.1
         verified: 10.6.0
       dependencies:
       - name: com.unity.ugui
@@ -3486,6 +3611,7 @@ m_PackageAssets:
         - 10.8.1
         - 10.9.0
         - 10.10.0
+        - 10.10.1
         compatible:
         - 10.6.0
         - 10.7.0
@@ -3493,6 +3619,7 @@ m_PackageAssets:
         - 10.8.1
         - 10.9.0
         - 10.10.0
+        - 10.10.1
         verified: 10.6.0
       dependencies:
       - name: com.unity.render-pipelines.core

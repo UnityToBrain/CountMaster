@@ -21,12 +21,16 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
-        <e p="destroy.cs" t="Include" />
+        <e p="menuManager.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="destroy.cs" t="Include" />
           <e p="enemyManager.cs" t="Include" />
           <e p="GateManager.cs" t="Include" />
+          <e p="ObjectPoolItem.cs" t="Include" />
+          <e p="ParentNull.cs" t="Include" />
           <e p="PlayerManager.cs" t="Include" />
           <e p="stickManManager.cs" t="Include" />
+          <e p="Tower.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
